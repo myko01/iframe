@@ -10,21 +10,15 @@
   <title>Child Site Deposit</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NNQHJ37');</script>
-  <!-- End Google Tag Manager -->
-
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NQ9ZPVQ');</script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NQ9ZPVQ');</script>
   <!-- End Google Tag Manager -->
 
   <!-- Bootstrap core CSS -->
@@ -52,15 +46,11 @@
 </head>
 
 <body class="bg-light">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNQHJ37"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQ9ZPVQ"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQ9ZPVQ" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  
+
   <div class="container">
     <main>
       <div class="py-5 text-center">
@@ -78,7 +68,7 @@
       <div class="row mt-2">
         <div class="col-md-12">
           <h5 class="mb-3 text-center">Provide your payment details: </h5>
-          <form class="needs-validation" novalidate>
+          <form class="needs-validation" novalidate id="depositForm">
             <div class="row g-3">
               <div class="col-sm-6">
                 <label for="firstName" class="form-label">First name</label>
@@ -155,10 +145,12 @@
 
             <hr class="my-4">
 
-            <div class="text-center mt-2"><a href="./success.html" class="w-100 btn btn-success btn-xl" type="button">Deposit</a></div>
-            
+            <div class="text-center mt-2">
+              <button class="w-100 btn btn-success btn-xl" type="submit">Deposit</button>
+            </div>
+
             <div class="text-center mt-2 py-2">
-              <a class="btn btn-link btn-sm" href="./decline.html" type="button">Close</a>
+              <button class="btn btn-link btn-sm" id="decline" type="button">Close</a>
             </div>
           </form>
         </div>
@@ -173,7 +165,7 @@
 
   <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script src="form-validation.js"></script>
+  <script src="form-sent.js"></script>
 </body>
 
 </html>
