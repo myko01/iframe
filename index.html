@@ -21,6 +21,8 @@
     })(window, document, 'script', 'dataLayer', 'GTM-NQ9ZPVQ');</script>
   <!-- End Google Tag Manager -->
 
+  <script src="assets/js/SendGTM.js"></script>
+
   <!-- Bootstrap core CSS -->
   <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -162,10 +164,29 @@
     </footer>
   </div>
 
-
   <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-
   <script src="form-sent.js"></script>
+
+  <script>
+    const form = document.getElementById('depositForm');
+    window.addEventListener('load', (event) => {
+      sendGtmService(
+        {
+          event: 'Deposit_Page_Opened'
+        }
+      )
+    });
+
+    form.addEventListener('load', (event) => {
+      sendGtmService(
+        {
+          event: 'Deposit_Submit'
+        }
+      )
+    });
+
+  </script>
+
 </body>
 
 </html>
