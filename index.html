@@ -168,23 +168,14 @@
   <script src="form-sent.js"></script>
 
   <script>
-    const form = document.getElementById('depositForm');
     window.addEventListener('load', (event) => {
+      console.log('Iframe Loaded');
       sendGtmService(
         {
           event: 'Deposit_Page_Opened'
         }
       )
     });
-
-    form.addEventListener('load', (event) => {
-      sendGtmService(
-        {
-          event: 'Deposit_Submit'
-        }
-      )
-    });
-
   </script>
 
 </body>
