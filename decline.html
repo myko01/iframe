@@ -11,18 +11,13 @@
 
   <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
 
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-NQ9ZPVQ');</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NK8JB6Q');</script>
   <!-- End Google Tag Manager -->
-
-  <script src="assets/js/SendGTM.js"></script>
 
   <!-- Bootstrap core CSS -->
   <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -46,9 +41,9 @@
 
 
 <body class="d-flex h-100 text-center ">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQ9ZPVQ" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NK8JB6Q"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <div class="cover-container d-flex w-100 h-100 flex-column align-items-center justify-content-center">
 
@@ -67,7 +62,7 @@
       <h1 class="py-2">Ohhh.. What about great child site world?</h1>
       <p class="lead">You can't play without many on you account.</p>
       <p class="lead">
-        <button id="depositFromDecline" class="btn btn-success btn-lg fw-bold">I want play!</button>
+        <a href="index.html" id="depositFromDecline" class="btn btn-success btn-lg fw-bold">I want play!</a>
       </p>
     </main>
 
@@ -76,24 +71,24 @@
   <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
-    const button = document.getElementById('depositFromDecline');
-    window.addEventListener('load', (event) => {
-      sendGtmService(
-        {
-          event: 'Deposit_Declined',
-        }
-      )
-    });
+    // const button = document.getElementById('depositFromDecline');
+    // window.addEventListener('load', (event) => {
+    //   sendGtmService(
+    //     {
+    //       event: 'Deposit_Declined',
+    //     }
+    //   )
+    // });
 
-    button.addEventListener('click', (event) => {
-      sendGtmService(
-        {
-          event: 'Repeat_Deposit_From_Decline',
-        }
-      );
+    // button.addEventListener('click', (event) => {
+    //   sendGtmService(
+    //     {
+    //       event: 'Repeat_Deposit_From_Decline',
+    //     }
+    //   );
 
-      window.location.replace("index.html");
-    });
+    //   window.location.replace("index.html");
+    // });
 
 
   </script>
